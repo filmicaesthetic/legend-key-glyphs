@@ -34,3 +34,26 @@ key_zig_zag <- function (data, params, size) {
               gp = gpar(col = data$colour,
                         fill = alpha(data$fill, data$alpha)))
 }
+
+# triangle legend key glyph
+key_triangle <- function (data, params, size) {
+  # draw triangle
+  triangle <- list(x = c(0.5000000, 0.0669873, 0.9330127), 
+                 y = c(1.00, 0.25, 0.25))
+  
+  # hexagon grob
+  polygonGrob(triangle$x, triangle$y, 
+              gp = gpar(col = data$colour,
+                        fill = alpha(data$fill, data$alpha)))
+}
+
+# pentagon legend key glyph
+key_pentagon <- function (data, params, size) {
+  # draw pentagon
+  pentagon <- list(x = c(0.50000000, 0.02447174, 0.20610737, 0.79389263, 0.97552826), 
+                   y = c(1.0000000, 0.6545085, 0.0954915, 0.0954915, 0.6545085))
+  # hexagon grob
+  polygonGrob(pentagon$x, pentagon$y, 
+              gp = gpar(col = data$colour,
+                        fill = alpha(data$fill, data$alpha)))
+}
